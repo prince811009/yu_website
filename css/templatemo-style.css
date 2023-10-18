@@ -36,14 +36,15 @@ p {
 .primary-white-button a {
 	display: inline-block;
 	background-color: #fff;
-	font-size: 13px;
 	padding: 12px 18px;
 	color: #121212;
 	font-weight: 500;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-decoration: none;
-	border-radius: 20px;
+	border-radius: 15px;
+	font-size: 14px;
+	line-height: 14px;
 }
 
 .primary-blue-button a {
@@ -139,7 +140,6 @@ p {
 }
 
 .navbar-brand img{
-background-color: #657c7c;
 padding: 2px 10px;
 }
 
@@ -221,7 +221,7 @@ bootstrap.min.css:5
 	width: 100%;
   	padding-top: 35vh;
   	text-align: center;
-	background-image: url(../img/school_bg_black.png);
+	background-image: url(../img/bg6.jpg);
   	vertical-align: middle;
 }
 
@@ -257,9 +257,28 @@ bootstrap.min.css:5
 	margin-top: 25px;
 }
 
+#home .container .text-content {
+	background-color: #0000007c;
+	padding: 100px 10px;
+	border-radius: 5px;
+}
+
 #home .container .text-content p{
 	text-align: left;
 }
+
+#home .container .text-content h3{
+	text-align: center;
+	color: white;
+	font-weight: 600;
+}
+
+#home .container .text-content h4{
+	text-align: center;
+	color: white;
+	font-weight: 600;
+}
+
 
 #about {
 	padding: 50px 0px 10px 0px;
@@ -345,17 +364,32 @@ bootstrap.min.css:5
   color: #f7c552;
 }
 
-#portfolio .page-section {
+#portfolio .page-section, #team .page-section, #project .page-section {
 	padding: 0px;
 }
 
 #portfolio .section-heading {
 	padding-top: 100px;
 	padding-bottom: 100px;
-	background-color: #0a3f44;
-	height: 740px;
+	background-color: #ffffff;
+	height: 400px;
 	margin-left: -100vh;
 	padding-left: 100vh;
+}
+
+#portfolio .section-heading, #team .section-heading {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: #ffffff;
+	height: 370px;
+	margin-left: -100vh;
+	padding-left: 100vh;
+}
+
+#project .section-heading {
+	padding-top: 100px;
+	padding-bottom: 0px;
+	height: 80px;
 }
 
 .projects-holder .mix {
@@ -366,32 +400,167 @@ bootstrap.min.css:5
 	  padding: 150px 0px 0px 40px;
 }
 
-#portfolio .project-item {
+#portfolio .project-item, #team .project-item, #project .project-item {
 	margin: 6px -10px;
 }
 
-#portfolio .section-heading h4 {
+#portfolio .section-heading h4, #team .section-heading h4, #project .section-heading h4 {
 	margin-top: 0px;
 	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #fff;
+	color: #000000;
 	letter-spacing: 1px;
 }
 
-#portfolio .section-heading .line-dec {
+#portfolio .section-heading .line-dec, #team .section-heading .line-dec, #project .section-heading .line-dec {
 	width: 270px;
 	height: 1px;
-	background-color: rgba(250, 250, 250, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	margin: 20px 0px 15px 0px;
 }
 
-#portfolio .section-heading p {
-	color: #fff;
+#portfolio .section-heading p, #team .section-heading p, #project .section-heading p {
+	color: #000000;
 	padding-right: 70px;
 	text-align: left;
 }
 
+#web_img {
+	background-image: url(../img/info_1.jpg);
+	background-size: cover;
+	text-align: center;
+	padding: 300px 0px;
+}
+
+#team_img {
+	background-image: url(../img/info_4.jpg);
+	background-size: cover;
+	text-align: center;
+	padding: 300px 0px;
+	margin-bottom: 50px;
+}
+
+#card, #card_custom {
+	--dark-cyan: hsl(158, 36%, 37%);
+    --cream: #f2f2f2;
+    --very-dark-blue: hsl(157, 30%, 24%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+    height: 100vh;
+    width: 100%;
+}
+#card .card, #card_custom .card {
+    width: 600px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    border-radius: 12px;
+}
+#card .card .card__img, #card .card .card__content {
+    width: 50%;
+}
+
+#card_custom .card .card__img, #card_custom .card .card__content {
+    width: 50%;
+}
+#card .card .card__img picture, #card_custom .card .card__img picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#card .card .card__img picture img, #card_custom .card .card__img picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px 0px 0px 12px;
+}
+
+#card .card .card__content, #card_custom .card .card__content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+#card .card .card__content .card__tag, #card_custom .card .card__content .card__tag {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: hsl(0, 0%, 0%);
+}
+#card .card .card__content .card__title, #card_custom .card .card__content .card__title {
+    font-family: 'Fraunces', serif;
+    text-transform: capitalize;
+	font-weight: 600;
+}
+#card .card .card__content .card__desc, #card_custom .card .card__content .card__desc {
+    font-size: 14px;
+    color: hsl(0, 0%, 0%);
+    line-height: 24px;
+}
+#card .card .card__content .card__price, #card_custom .card .card__content .card__price {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+#card .card .card__content .card__price h1, #card_custom .card .card__content .card__price h1 {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+}
+#card .card .card__content .card__price s, #card_custom .card .card__content .card__price s {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+#card .card .card__content .card__btn, #card_custom .card .card__content .card__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    background-color: hsl(158, 36%, 37%);
+    padding: 14px;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 200ms linear;
+}
+#card .card .card__content .card__btn:hover, #card_custom .card .card__content .card__btn:hover {
+    background-color: hsl(157, 30%, 24%);
+}
+
+@media (max-width: 600px) {
+    body {
+        height: auto;
+    }
+    #card, #card_custom {
+        padding: 20px;
+    }
+    #card .card, #card_custom .card{
+        flex-direction: column;
+    }
+    #card .card .card__img, #card .card .card__content {
+        width: 100%;
+    }
+	#card_custom .card .card__img, #card_custom .card .card__content {
+        width: 100%;
+    }
+    #card .card .card__img picture img, #card_custom .card .card__img picture img {
+        border-radius: 12px 12px 0px 0px;
+    }
+    #card .card .card__content, #card_custom .card .card__content {
+        padding: 20px;
+        row-gap: 16px;
+    }
+}
 
 #testimonial {
 	background-image: url(../img/bg_4.png);
@@ -945,10 +1114,10 @@ footer .connect-us ul li a:hover {
 		margin-bottom: 100px;
 	} 
 
-	#portfolio .section-heading {
+	#portfolio .section-heading, #team .section-heading {
 		text-align: center;
 		padding: 180px 0px 0px 0px;
-		background-color: #0a3f44;
+		background-color: #ffffff;
 		/*  height: 560px;  */
 		margin-left: -15px;
 		padding-left: 0vh;
@@ -958,12 +1127,17 @@ footer .connect-us ul li a:hover {
 		overflow: hidden;
 	}
 
-	#portfolio .section-heading .line-dec {
+	#project .section-heading {
+		text-align: center;
+	}
+
+
+	#portfolio .section-heading .line-dec, #team .section-heading .line-dec, #project .section-heading .line-dec {
 		margin: 20px auto 15px auto;
 	}
 
-	#portfolio .section-heading p {
-		padding: 0px 20px;
+	#portfolio .section-heading p, #team .section-heading p, #project .section-heading p {
+		padding: 0px 40px;
 	}
 
 	.projects-holder {
@@ -971,7 +1145,7 @@ footer .connect-us ul li a:hover {
 		padding: 15px 0px;
 	}
 
-	#portfolio .project-item {
+	#portfolio .project-item, #team .project-item, #project .project-item {
 		margin: 15px 0px;
 	}
 
@@ -1081,8 +1255,14 @@ footer .connect-us ul li a:hover {
 		color: #343434!important;
 	}
 
-	#portfolio .section-heading {
-		padding-top: 150px;
+	#portfolio .section-heading, #team .section-heading {
+		padding-top: 100px;
+		padding-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	#project .section-heading {
+		padding-top: 0px;
 		padding-bottom: 0px;
 		margin-top: 0px;
 	}
@@ -1091,8 +1271,14 @@ footer .connect-us ul li a:hover {
 
 @media (max-width: 385px){
 
-	#portfolio .section-heading {
+	#portfolio .section-heading, #team .section-heading {
 		padding-top: 120px;
+		padding-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	#project .section-heading {
+		padding-top: 0px;
 		padding-bottom: 0px;
 		margin-top: 0px;
 	}
